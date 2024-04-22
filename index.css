@@ -32,25 +32,26 @@ a:hover {
     text-decoration: none;
 }
 
-.header {
-    position: sticky;
+.headerContainer {
+    position: sticky !important;
     top: 0;
     box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.75);
     background-color: #f5f5f5;
+    z-index: 99;
+    width: 100%;
+}
+.headerContainer{
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    z-index: 99;
 }
 
 .logoHeader {
     font-family: "Indie Flower";
     font-weight: 700;
-    font-size: 32px;
-    color: #B00000;
+    font-size: 32px !important;
+    color: #B00000 !important;
     padding: 10px 10px 10px 15px;
 
 }
@@ -59,17 +60,21 @@ a:hover {
     display: flex;
     column-gap: 8px;
     margin-right: 15px;
+    margin-left: auto;
+}
+.linkHeader {
+
+    color: #B00000 !important;
+    text-decoration: none;
+    font-size: 18px !important;
 }
 
 .linksHeader a {
-    color: #B00000;
-    text-decoration: none;
-    font-size: 18px;
 }
 
-.linksHeader a:hover {
+.linkHeader:hover {
     text-decoration: none;
-    color: #F0E68C;
+    color: #F0E68C !important;
 }
 .containerBody {
     padding: 30px 0px;
@@ -84,6 +89,9 @@ a:hover {
     padding: 100px 20px 0;
     max-width: 1440px;
     margin: auto;
+}
+.titleServicios{
+    margin-top: 64px;
 }
 .titleServicios,
 .titleQuesos,
@@ -244,3 +252,26 @@ font-family: "Indie Flower";
 
 }
 
+@media (max-width:640px) {
+    .nombreQuesoContainer,
+    .imagenQueso{
+        width: 140px;
+        height: 110px;
+    }
+    .logoHeader{
+        font-size: 28px !important;
+    }
+    .nuestrosQuesos{
+        max-width: 100%;
+    }
+    .copyright {
+        margin-top: 20px;
+    }
+    .containerImageService{
+        align-content: center;
+    }
+    .imageService{
+        width: 150px;
+    height: 225px;
+    }
+}
